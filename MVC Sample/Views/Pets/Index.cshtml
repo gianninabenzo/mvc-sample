@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MVC.Entities.Pet>
+
+@{
+    ViewBag.Pet = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name of the Owner
+        </th>
+        <th>
+            Name of pet
+        </th>
+        <th>
+            Breed
+        </th>
+        <th>
+            Colour
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Breed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Colour)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PetID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PetID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PetID })
+        </td>
+    </tr>
+}
+
+</table>
