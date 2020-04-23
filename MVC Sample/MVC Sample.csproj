@@ -267,7 +267,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\People\Index.cshtml" />
     <Content Include="Views\People\Details.cshtml" />
-    <Content Include="Views\People\Create2.cshtml" />
     <Content Include="Views\People\Edit.cshtml" />
     <Content Include="Views\Pets\Index.cshtml" />
     <Content Include="Views\Pets\Create.cshtml" />

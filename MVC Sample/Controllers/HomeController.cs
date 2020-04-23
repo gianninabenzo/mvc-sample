@@ -10,7 +10,7 @@ namespace MVC_Sample.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("Index", "People");
+            return View("Index", "People");
         }
     }
 }
